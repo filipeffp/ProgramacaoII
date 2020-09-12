@@ -1,7 +1,7 @@
 
 public class ArmaDeFogo {
 	private String especie;//pistola, revólver
-	private String marca;//taurus, glock...
+	private String marca;//taurus, glock, rossi...
 	private String modelo;//PT 100,
 	private float calibre;
 	private String nrSerie;
