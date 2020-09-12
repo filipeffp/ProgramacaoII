@@ -7,7 +7,7 @@ public class ArmaDeFogo {
 	private String nrSerie;
 	private int patrimonio;
 	private String status;
-	//adicionar objeto pessoa
+	//adicionar objeto pessoa a
 	
 	final String COFRE = "Armazenada";
 	final String EMPRESTADA = "Emprestada";
