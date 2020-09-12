@@ -1,13 +1,13 @@
 
 public class ArmaDeFogo {
-	private String especie;//pistola, revólver
+	private String especie;//pistola, revÃ³lver
 	private String marca;//taurus, glock...
 	private String modelo;//PT 100,
 	private float calibre;
 	private String nrSerie;
 	private int patrimonio;
 	private String status;
-	//adicionar objeto pessoa a
+	//adicionar a classe pessoa como atributo
 	
 	final String COFRE = "Armazenada";
 	final String EMPRESTADA = "Emprestada";
