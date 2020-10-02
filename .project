@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Documentação/UML.docx</name>
+			<type>1</type>
+			<location>C:/Users/luanp/Downloads/UML.docx</location>
+		</link>
+	</linkedResources>
 </projectDescription>
