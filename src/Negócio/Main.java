@@ -1,9 +1,10 @@
+package Negócio;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Pessoa militar1 = new Militar("filipe", "cpf", "1234");
+		System.out.println(militar1);
 	}
 
 }

@@ -1,3 +1,4 @@
+package Negócio;
 
 public class ArmaDeFogo {
 	private String especie;//pistola, revolver
