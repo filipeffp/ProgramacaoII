@@ -23,4 +23,9 @@ public class ArmaDeFogoOrdinaria extends ArmaDeFogo {
 	public void setProprietario(Pessoa proprietario) {
 		this.proprietario = proprietario;
 	}
+	@Override
+	public String toString() {
+		return "ArmaDeFogoOrdinaria [proprietario=" + proprietario + "]";
+	}
+	
 }
