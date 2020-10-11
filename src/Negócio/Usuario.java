@@ -1,52 +1,31 @@
 package Negócio;
-import java.util.ArrayList;
+
 
 public class Usuario {
-	private String senha;
-	private String log;
-	private Militar militar;
-	private int atual = 0;
-	private  ArrayList<Usuario> usuario;
+	protected String senha;
+	protected String log;
+	protected Militar militar;
+	protected boolean admin = false;
 	
 	
 	public Usuario(String senha, Militar militar) {
 		super();
-		usuario = new ArrayList<>();
 		this.senha = senha;
 		this.militar = militar;
 		this.log = militar.getCpf();
 	}
 
-	public String cadastrar(Usuario login) {
-		String retorno = "";
-		boolean cond = true;
-		for(int i=0;i<atual;i++) {
-			if(usuario.get(atual).getLog() == login.getLog()) {
-				retorno = "USUÁRIO JÁ CADASTRADO";
-				cond = false;
-			}
-		}
-		if(cond == true){
-		usuario.add(login);
-		retorno = "USUÁRIO CADASTRADO";
-		System.out.println(militar.getNome());
-		atual++;
-		}
-		return retorno;
-		
+
+	public boolean isAdmin() {
+		return admin;
 	}
-	//alterar condições de segurança depois ex.: pergunta de segurança
-	public String trocarSenha(Usuario login) {
-		String retorno = "USUÁRIO NÃO CADASTRADO";
-		for(int i=0;i<atual;i++) {
-			if(usuario.get(atual).getLog() == login.getLog()) {
-				usuario.get(atual).setSenha(login.getSenha());
-				retorno = "SENHA ALTERADA";
-			}
-		
-		}
-		return retorno;
+
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
 	}
+
+
 	public String getSenha() {
 		return senha;
 	}
@@ -66,4 +45,5 @@ public class Usuario {
 		this.log = log;
 	}
 
-}
+
+	}
