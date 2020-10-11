@@ -15,7 +15,7 @@ public abstract class ArmaDeFogo extends MaterialBelico {
 	final String SAIDA = "Baixada";
 	
 	//construtores
-	public ArmaDeFogo(float calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga, String marca,
+	public ArmaDeFogo(String calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga, String marca,
 			String modelo, String nrSerie, String status) {
 		super(calibre, especie, dataCarga, dataDescarga);
 		this.marca = marca;

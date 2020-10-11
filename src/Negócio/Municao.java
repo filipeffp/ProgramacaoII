@@ -6,7 +6,7 @@ public class Municao extends MaterialBelico{
 	private int quantidade;
 
 	//construtores
-	public Municao(float calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga, int quantidade) {
+	public Municao(String calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga, int quantidade) {
 		super(calibre, especie, dataCarga, dataDescarga);
 		this.quantidade = quantidade;
 	}

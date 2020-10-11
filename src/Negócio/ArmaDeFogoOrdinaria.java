@@ -6,11 +6,11 @@ public class ArmaDeFogoOrdinaria extends ArmaDeFogo {
 	private Pessoa proprietario;
 	
 	//construtores
-	public ArmaDeFogoOrdinaria(float calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga, String marca,
+	public ArmaDeFogoOrdinaria(String calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga, String marca,
 			String modelo, String nrSerie, String status) {
 		super(calibre, especie, dataCarga, dataDescarga, marca, modelo, nrSerie, status);
 	}
-	public ArmaDeFogoOrdinaria(float calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga, String marca,
+	public ArmaDeFogoOrdinaria(String calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga, String marca,
 			String modelo, String nrSerie, String status, Pessoa proprietario) {
 		super(calibre, especie, dataCarga, dataDescarga, marca, modelo, nrSerie, status);
 		this.proprietario = proprietario;

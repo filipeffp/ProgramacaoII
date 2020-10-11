@@ -3,13 +3,13 @@ package Negócio;
 import java.time.LocalDate;
 
 public abstract class MaterialBelico {
-	protected float calibre;//.40, .38, 9mm, 7,62mm
+	protected String calibre;//.40, .38, 9mm, 7,62mm
 	protected String especie;//pistola, revolver
 	protected LocalDate dataCarga;
 	protected LocalDate dataDescarga;
 	
 	//construtores
-	public MaterialBelico(float calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga) {
+	public MaterialBelico(String calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga) {
 		super();
 		this.calibre = calibre;
 		this.especie = especie;
@@ -18,10 +18,10 @@ public abstract class MaterialBelico {
 	}
 		
 	//métodos
-	public float getCalibre() {
+	public String getCalibre() {
 		return calibre;
 	}
-	public void setCalibre(float calibre) {
+	public void setCalibre(String calibre) {
 		this.calibre = calibre;
 	}
 	public String getEspecie() {

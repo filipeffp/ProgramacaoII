@@ -6,12 +6,12 @@ public class MunicaoOrdinaria extends Municao {
 	private Pessoa proprietario;
 	
 	//construtores
-	public MunicaoOrdinaria(float calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga,
+	public MunicaoOrdinaria(String calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga,
 			int quantidade) {
 		super(calibre, especie, dataCarga, dataDescarga, quantidade);
 	}
 
-	public MunicaoOrdinaria(float calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga, int quantidade,
+	public MunicaoOrdinaria(String calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga, int quantidade,
 			Pessoa proprietario) {
 		super(calibre, especie, dataCarga, dataDescarga, quantidade);
 		this.proprietario = proprietario;

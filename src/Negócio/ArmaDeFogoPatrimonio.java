@@ -9,11 +9,17 @@ public class ArmaDeFogoPatrimonio extends ArmaDeFogo {
 	private LocalDate dataDevolucao;
 	
 	//construtores
-	public ArmaDeFogoPatrimonio(float calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga,
+	public ArmaDeFogoPatrimonio(String calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga,
 			String marca, String modelo, String nrSerie, String status, String patrimonio, Militar responsavel) {
 		super(calibre, especie, dataCarga, dataDescarga, marca, modelo, nrSerie, status);
 		this.patrimonio = patrimonio;
 		this.responsavel = responsavel;
+	}
+	
+	public ArmaDeFogoPatrimonio(String calibre, String especie, LocalDate dataCarga, LocalDate dataDescarga,
+			String marca, String modelo, String nrSerie, String status, String patrimonio) {
+		super(calibre, especie, dataCarga, dataDescarga, marca, modelo, nrSerie, status);
+		this.patrimonio = patrimonio;
 	}
 
 	//métodos
@@ -31,6 +37,12 @@ public class ArmaDeFogoPatrimonio extends ArmaDeFogo {
 	
 	public void setResponsavel(Militar responsavel) {
 		this.responsavel = responsavel;
+	}
+
+	@Override
+	public String toString() {
+		return "ArmaDeFogoPatrimonio [patrimonio=" + patrimonio + ", responsavel=" + responsavel + ", dataEmprestimo="
+				+ dataEmprestimo + ", dataDevolucao=" + dataDevolucao + "]";
 	}
 	
 	
