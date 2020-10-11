@@ -2,7 +2,7 @@ package Negócio;
 
 import java.time.LocalDate;
 
-public abstract class ArmaDeFogo extends MaterialBelico {
+public class ArmaDeFogo extends MaterialBelico {
 
 	private String marca;//taurus, glock, rossi...
 	private String modelo;//PT 100,

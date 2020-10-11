@@ -56,16 +56,17 @@ public class Main {
 		       case 8:
 		    	   
 		    	   break;
-		    	   
+		       case 9:
+		   		System.out.println("Encerrado!");
+		   		break;
 		    //default
 		       default:
+		    	   System.out.println("Opção inválida");
 		    	   break;
 		     }
-
 			
 		} while (opcao!=9);
 			
-		
 	}
 
 }
