@@ -1,22 +1,23 @@
 package Negócio;
 import java.util.ArrayList;
 
-public class Login {
+public class Usuario {
 	private String senha;
 	private String log;
+	private Militar militar;
 	private int atual = 0;
-	private  ArrayList<Login> usuario;
+	private  ArrayList<Usuario> usuario;
 	
 	
-	public Login(String senha, String log) {
+	public Usuario(String senha, Militar militar) {
 		super();
 		usuario = new ArrayList<>();
 		this.senha = senha;
-		this.log = log;
+		this.militar = militar;
+		this.log = militar.getCpf();
 	}
 
-
-	public String cadastrar(Login login) {
+	public String cadastrar(Usuario login) {
 		String retorno = "";
 		boolean cond = true;
 		for(int i=0;i<atual;i++) {
@@ -28,13 +29,14 @@ public class Login {
 		if(cond == true){
 		usuario.add(login);
 		retorno = "USUÁRIO CADASTRADO";
+		System.out.println(militar.getNome());
 		atual++;
 		}
 		return retorno;
 		
 	}
 	//alterar condições de segurança depois ex.: pergunta de segurança
-	public String trocarSenha(Login login) {
+	public String trocarSenha(Usuario login) {
 		String retorno = "USUÁRIO NÃO CADASTRADO";
 		for(int i=0;i<atual;i++) {
 			if(usuario.get(atual).getLog() == login.getLog()) {
