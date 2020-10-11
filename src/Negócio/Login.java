@@ -33,6 +33,7 @@ public class Login {
 		return retorno;
 		
 	}
+	//alterar condições de segurança depois ex.: pergunta de segurança
 	public String trocarSenha(Login login) {
 		String retorno = "USUÁRIO NÃO CADASTRADO";
 		for(int i=0;i<atual;i++) {

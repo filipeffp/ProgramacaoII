@@ -2,7 +2,7 @@ package Negócio;
 
 import java.time.LocalDate;
 
-public class Municao extends MaterialBelico{
+public abstract class Municao extends MaterialBelico{
 	private int quantidade;
 
 	//construtores
