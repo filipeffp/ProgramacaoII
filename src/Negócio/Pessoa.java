@@ -3,6 +3,7 @@ package Negócio;
 public class Pessoa {
 	private String nome;
 	private String cpf;
+	private boolean ativa = true;
 	
 	public Pessoa(String nome, String cpf) {
 		super();
@@ -27,6 +28,7 @@ public class Pessoa {
 	}
 
 	public boolean isAtiva() {
+<<<<<<< HEAD
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -34,6 +36,13 @@ public class Pessoa {
 	public void setAtiva(boolean b) {
 		// TODO Auto-generated method stub
 		
+=======
+		return ativa;
+	}
+
+	public void setAtiva(boolean ativa) {
+		this.ativa = ativa;
+>>>>>>> branch 'master' of https://github.com/filipeffp/ProgramacaoII.git
 	}
 	
 }

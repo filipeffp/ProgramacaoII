@@ -2,12 +2,13 @@ package Negócio;
 
 import java.time.LocalDate;
 
-public abstract class ArmaDeFogo extends MaterialBelico {
+public class ArmaDeFogo extends MaterialBelico {
 
 	private String marca;//taurus, glock, rossi...
 	private String modelo;//PT 100,
 	private String nrSerie;
 	private String status;
+	private boolean ativa = true;
 	
 	//constantes
 	final String COFRE = "Armazenada";
@@ -48,6 +49,14 @@ public abstract class ArmaDeFogo extends MaterialBelico {
 	}
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public boolean isAtiva() {
+		return ativa;
+	}
+
+	public void setAtiva(boolean ativa) {
+		this.ativa = ativa;
 	}
 	
 }
