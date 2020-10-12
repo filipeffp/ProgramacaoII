@@ -1,6 +1,6 @@
-package Dados;
+package dados;
 
-import Negócio.ArmaDeFogo;
+import negocio.ArmaDeFogo;
 
 public interface IRepositorioArmaDeFogo {
 	

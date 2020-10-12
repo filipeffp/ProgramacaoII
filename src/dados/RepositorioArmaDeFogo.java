@@ -1,7 +1,8 @@
-package Dados;
+package dados;
 
 import java.util.ArrayList;
-import Negócio.ArmaDeFogo;
+
+import negocio.ArmaDeFogo;
 
 public class RepositorioArmaDeFogo implements IRepositorioArmaDeFogo{
 	private ArrayList<ArmaDeFogo> armasDeFogo;

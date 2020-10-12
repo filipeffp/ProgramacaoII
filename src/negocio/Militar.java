@@ -1,4 +1,4 @@
-package Negócio;
+package negocio;
 
 public class Militar extends Pessoa {
 	String matricula;

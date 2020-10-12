@@ -1,4 +1,4 @@
-package Negócio;
+package negocio;
 
 
 public class Usuario extends Militar{

@@ -1,8 +1,8 @@
-package Dados;
+package dados;
 
 import java.util.ArrayList;
 
-import Negócio.Municao;
+import negocio.Municao;
 
 public class RepositorioMunicoes {
 

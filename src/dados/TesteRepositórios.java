@@ -1,10 +1,10 @@
-package Dados;
+package dados;
 
 import java.time.LocalDate;
 
-import Negócio.ArmaDeFogo;
-import Negócio.ArmaDeFogoPatrimonio;
-import Negócio.Militar;
+import negocio.ArmaDeFogo;
+import negocio.ArmaDeFogoPatrimonio;
+import negocio.Militar;
 
 public class TesteRepositórios {
 

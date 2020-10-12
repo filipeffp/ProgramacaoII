@@ -1,8 +1,9 @@
-package Dados;
+package dados;
 
 import java.util.ArrayList;
-import Negócio.Usuario;
 import java.util.Scanner;
+
+import negocio.Usuario;
 
 public class RepositorioUsuario{
   private  ArrayList<Usuario> usuario;

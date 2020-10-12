@@ -1,6 +1,6 @@
-package Dados;
+package dados;
 
-import Negócio.Pessoa;
+import negocio.Pessoa;
 
 public interface IRepositorioPessoas {
 	

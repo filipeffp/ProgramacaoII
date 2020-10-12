@@ -1,6 +1,6 @@
-package Negócio;
+package negocio;
 
-import Dados.IRepositorioArmaDeFogo;
+import dados.IRepositorioArmaDeFogo;
 
 public class Cofre {
 	

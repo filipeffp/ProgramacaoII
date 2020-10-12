@@ -1,4 +1,4 @@
-package Negócio;
+package negocio;
 import java.time.LocalDate;
 
 public class Historico {

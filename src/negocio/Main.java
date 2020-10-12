@@ -1,10 +1,10 @@
-package Negócio;
+package negocio;
 
 import java.util.Scanner;
 
-import Dados.RepositorioArmaDeFogo;
-import Dados.RepositorioPessoas;
-import Dados.RepositorioUsuario;
+import dados.RepositorioArmaDeFogo;
+import dados.RepositorioPessoas;
+import dados.RepositorioUsuario;
 
 public class Main {
 
