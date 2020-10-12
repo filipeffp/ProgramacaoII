@@ -35,25 +35,16 @@ public class Main {
 							cond = true;
 							break;
 						}
-						else {
-							cond = false;
-							if(cont == repositorioUsuarios.tamanho()) {
-								break;
-							}
-						}
+					
 					}
-					else {
-						cond = false;
-						if(cont == repositorioUsuarios.tamanho()) {
-							break;
-						}
-					}
-					cont++;
-				}
+				
+				
+			
+			
+			}
 				if(cond == true) {
 					System.out.println("Entrou no sistema...");
 				}
-			
 				else if(cond == false) {
 					System.out.println("Falha no login...");
 			}

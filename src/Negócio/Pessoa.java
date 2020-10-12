@@ -28,21 +28,16 @@ public class Pessoa {
 	}
 
 	public boolean isAtiva() {
-<<<<<<< HEAD
+
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	public void setAtiva(boolean b) {
-		// TODO Auto-generated method stub
-		
-=======
-		return ativa;
-	}
+
 
 	public void setAtiva(boolean ativa) {
 		this.ativa = ativa;
->>>>>>> branch 'master' of https://github.com/filipeffp/ProgramacaoII.git
+
 	}
 	
 }
