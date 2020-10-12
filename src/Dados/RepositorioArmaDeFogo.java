@@ -5,6 +5,7 @@ import Negócio.ArmaDeFogo;
 
 public class RepositorioArmaDeFogo implements IRepositorioArmaDeFogo{
 	private ArrayList<ArmaDeFogo> armasDeFogo;
+	
 	public RepositorioArmaDeFogo () {
 		this.armasDeFogo = new ArrayList<>();
 		}

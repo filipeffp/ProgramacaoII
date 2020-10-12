@@ -58,7 +58,7 @@ public class ArmaDeFogo extends MaterialBelico {
 	public void setAtiva(boolean ativa) {
 		this.ativa = ativa;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "ArmaDeFogo [marca=" + marca + ", modelo=" + modelo + ", nrSerie=" + nrSerie + ", status=" + status
