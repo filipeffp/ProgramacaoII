@@ -87,7 +87,7 @@ public class Main {
 						
 					}
 				if(cont == 0){
-					System.out.println("Dado incorreto");
+					System.out.println("Falha no acesso");
 					
 					
 					}
