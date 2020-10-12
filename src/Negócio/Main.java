@@ -3,12 +3,43 @@ package Negócio;
 import java.time.LocalDate;
 import java.util.Scanner;
 
+import Dados.RepositorioArmaDeFogo;
+import Dados.RepositorioPessoas;
+import Dados.RepositorioUsuarios;
+
 public class Main {
 
 	public static void main(String[] args) {
+		
 		//inicializar os repositórios
+		RepositorioPessoas pessoas = new RepositorioPessoas();
+		RepositorioArmaDeFogo armas = new RepositorioArmaDeFogo();
+		RepositorioUsuarios usuarios = new RepositorioUsuarios();
+		
 		Scanner input = new Scanner(System.in);
 		int opcao;
+		do {
+			System.out.println("		[MENU]");
+			System.out.println("1 - Login");
+			System.out.println("2 - Cadastrar usuário");
+			System.out.println("3 - Sair");
+
+			opcao = input.nextInt();
+			
+			switch (opcao) {
+			case 1:
+				System.out.println("");
+				Usuario usuario = new Usuari);
+				
+				usuarios.cadastrarUsuario(usuario);
+				break;
+
+			default:
+				break;
+			}
+			
+		}while();		
+
 		do {
 			System.out.println("		[MENU]");
 			System.out.println("1 - Cadastrar Armas de fogo");

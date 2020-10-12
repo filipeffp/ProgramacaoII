@@ -1,9 +1,10 @@
 package Dados;
 
 import java.util.ArrayList;
+
 import Negócio.Pessoa;
 
-public class RepositorioPessoas {
+public class RepositorioPessoas implements IRepositorioPessoas {
 	private ArrayList<Pessoa> pessoas;
 	
 	public RepositorioPessoas () {
@@ -47,5 +48,16 @@ public class RepositorioPessoas {
 			System.out.println("PESSOA NÃO CADASTRADA!");
 			return retorno;
 }
-	
+	public boolean buscarPessoa(Pessoa pessoa) {
+		boolean retorno = false;
+		for(int i=0;i<pessoas.size();i++) {
+			if(pessoas.get(i).getCpf() == pessoa.getCpf() && pessoas.get(i).isAtiva() == true) {
+				retorno = true;
+				System.out.println("Pessoa encontrada!");
+			}else {
+				System.out.println("Pessoa não encontrada!");
+			}
+	}
+		return retorno;	
+	}
 }

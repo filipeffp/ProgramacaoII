@@ -3,7 +3,7 @@ package Dados;
 import java.util.ArrayList;
 import Negócio.ArmaDeFogo;
 
-public class RepositorioArmaDeFogo {
+public class RepositorioArmaDeFogo implements IRepositorioArmaDeFogo{
 	private ArrayList<ArmaDeFogo> armasDeFogo;
 	public RepositorioArmaDeFogo () {
 		this.armasDeFogo = new ArrayList<>();
@@ -47,4 +47,17 @@ public class RepositorioArmaDeFogo {
 				return retorno;
 	}
 
+		@Override
+		public boolean buscarArmaDeFogo(ArmaDeFogo armaDeFogo) {
+			boolean retorno = false;
+			for(int i=0;i<armasDeFogo.size();i++) {
+				if(armasDeFogo.get(i).getNrSerie() == armaDeFogo.getNrSerie() && armasDeFogo.get(i).isAtiva() == true) {
+					retorno = true;
+					System.out.println("Arma encontrada!");
+				}else {
+					System.out.println("Arma não encontrada!");
+				}
+		}
+			return retorno;	
+		}
 }

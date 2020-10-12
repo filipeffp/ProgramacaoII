@@ -3,7 +3,7 @@ package Dados;
 import java.util.ArrayList;
 import Negócio.Usuario;
 
-public class RepositorioUsuarios {
+public class RepositorioUsuarios implements IRepositorioUsuarios {
 	private ArrayList<Usuario> usuarios;
 	
 	public RepositorioUsuarios () {
@@ -47,5 +47,16 @@ public class RepositorioUsuarios {
 			System.out.println("PESSOA NÃO CADASTRADA!");
 			return retorno;
 }
-	
+	public boolean buscarUsuario(Usuario usuario) {
+		boolean retorno = false;
+		for(int i=0;i<usuarios.size();i++) {
+			if(usuarios.get(i).getLog() == usuario.getLog() && usuarios.get(i).isAtiva() == true) {
+				retorno = true;
+				System.out.println("Usuário encontrado!");
+			}else {
+				System.out.println("Usuário não encontrado!");
+			}
+	}
+		return retorno;	
+	}
 }
