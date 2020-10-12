@@ -1,20 +1,17 @@
 package Negócio;
 
 
-public class Usuario {
+public class Usuario extends Militar{
 	protected String senha;
 	protected String log;
-	protected Militar militar;
 	protected boolean admin = false;
 	
 	
-	public Usuario(String senha, Militar militar) {
-		super();
+	public Usuario(String senha, String cpf, String matricula,String nome) {
+		super(cpf, matricula,nome);
 		this.senha = senha;
-		this.militar = militar;
-		this.log = militar.getCpf();
+		this.log = cpf;
 	}
-
 
 	public boolean isAdmin() {
 		return admin;

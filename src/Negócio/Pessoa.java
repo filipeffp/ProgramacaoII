@@ -25,5 +25,15 @@ public class Pessoa {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
+
+	public boolean isAtiva() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public void setAtiva(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
