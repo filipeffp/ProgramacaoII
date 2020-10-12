@@ -1,5 +1,7 @@
 package negocio;
 
+import java.time.LocalDate;
+
 import dados.IRepositorioArmaDeFogo;
 
 public class Cofre {
@@ -20,5 +22,13 @@ public class Cofre {
 	
 	public void buscarArma(ArmaDeFogo armaDeFogo) {
         this.repositorio.buscarArmaDeFogo(armaDeFogo);
+	}
+	
+	public void emprestarArma(ArmaDeFogo armaDeFogo, Militar militar, LocalDate dataEmprestimo) {
+	
+	}
+	
+	public void devolverArma(ArmaDeFogo armaDeFogo, Militar militar, LocalDate dataDevolucao) {
+		
 	}
 }

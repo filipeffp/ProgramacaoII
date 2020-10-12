@@ -1,5 +1,7 @@
 package dados;
 
+//CLASSE PARA TESTAR CRUD
+
 import java.time.LocalDate;
 
 import negocio.ArmaDeFogo;
