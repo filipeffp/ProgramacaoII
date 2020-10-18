@@ -4,9 +4,9 @@ package dados;
 
 import java.time.LocalDate;
 
-import negocio.ArmaDeFogo;
-import negocio.ArmaDeFogoPatrimonio;
-import negocio.Militar;
+import negocio.beans.ArmaDeFogo;
+import negocio.beans.ArmaDeFogoPatrimonio;
+import negocio.beans.Militar;
 
 public class TesteRepositórios {
 

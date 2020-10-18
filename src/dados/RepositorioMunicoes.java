@@ -2,7 +2,7 @@ package dados;
 
 import java.util.ArrayList;
 
-import negocio.Municao;
+import negocio.beans.Municao;
 
 public class RepositorioMunicoes {
 

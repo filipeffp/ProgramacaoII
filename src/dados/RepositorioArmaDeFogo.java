@@ -2,7 +2,7 @@ package dados;
 
 import java.util.ArrayList;
 
-import negocio.ArmaDeFogo;
+import negocio.beans.ArmaDeFogo;
 
 public class RepositorioArmaDeFogo implements IRepositorioArmaDeFogo{
 	private ArrayList<ArmaDeFogo> armasDeFogo;

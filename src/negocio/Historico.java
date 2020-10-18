@@ -1,6 +1,9 @@
 package negocio;
 import java.time.LocalDate;
 
+import negocio.beans.ArmaDeFogo;
+import negocio.beans.Municao;
+
 public class Historico {
 	private ArmaDeFogo arma;
 	private Municao municao;

@@ -5,6 +5,7 @@ import java.util.Scanner;
 import dados.RepositorioArmaDeFogo;
 import dados.RepositorioPessoas;
 import dados.RepositorioUsuario;
+import negocio.beans.Usuario;
 
 public class Main {
 

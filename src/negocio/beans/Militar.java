@@ -1,4 +1,4 @@
-package negocio;
+package negocio.beans;
 
 public class Militar extends Pessoa {
 	String matricula;

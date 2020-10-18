@@ -2,7 +2,7 @@ package dados;
 
 import java.util.ArrayList;
 
-import negocio.Pessoa;
+import negocio.beans.Pessoa;
 
 public class RepositorioPessoas implements IRepositorioPessoas {
 	private ArrayList<Pessoa> pessoas;

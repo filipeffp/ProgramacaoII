@@ -3,7 +3,7 @@ package dados;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import negocio.Usuario;
+import negocio.beans.Usuario;
 
 public class RepositorioUsuario{
   private  ArrayList<Usuario> usuario;

@@ -1,6 +1,6 @@
 package dados;
 
-import negocio.Usuario;
+import negocio.beans.Usuario;
 
 public interface IRepositorioUsuarios {
 	

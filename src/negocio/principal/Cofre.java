@@ -3,8 +3,8 @@ package negocio.principal;
 import java.time.LocalDate;
 
 import dados.IRepositorioArmaDeFogo;
-import negocio.ArmaDeFogo;
-import negocio.Militar;
+import negocio.beans.ArmaDeFogo;
+import negocio.beans.Militar;
 
 public class Cofre {
 	

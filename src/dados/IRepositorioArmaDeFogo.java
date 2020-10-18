@@ -1,6 +1,6 @@
 package dados;
 
-import negocio.ArmaDeFogo;
+import negocio.beans.ArmaDeFogo;
 
 public interface IRepositorioArmaDeFogo {
 	
