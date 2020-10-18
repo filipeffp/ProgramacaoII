@@ -2,6 +2,7 @@ package dados;
 
 import java.util.ArrayList;
 
+import negocio.beans.ArmaDeFogo;
 import negocio.beans.Pessoa;
 
 public class RepositorioPessoas implements IRepositorioPessoas {
@@ -59,5 +60,14 @@ public class RepositorioPessoas implements IRepositorioPessoas {
 			}
 	}
 		return retorno;	
+	}
+	
+	//Verificar se a pessoa existe
+	public boolean existe(Pessoa pessoa) {
+		boolean existe = false;
+			if(pessoas.contains(pessoa)) {
+			existe = true;
+		}
+		return existe;
 	}
 }

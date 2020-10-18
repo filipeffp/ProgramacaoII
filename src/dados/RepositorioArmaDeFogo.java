@@ -48,7 +48,7 @@ public class RepositorioArmaDeFogo implements IRepositorioArmaDeFogo{
 				System.out.println("ARMA NÃO CADASTRADA!");
 				return retorno;
 	}
-
+		//procurar arma de fogo true == arma existe e está ativa, ou false não existe ou não está ativa.
 		@Override
 		public boolean buscarArmaDeFogo(ArmaDeFogo armaDeFogo) {
 			boolean retorno = false;
@@ -61,5 +61,14 @@ public class RepositorioArmaDeFogo implements IRepositorioArmaDeFogo{
 				}
 		}
 			return retorno;	
+		}
+		
+		//Verificar se a arma existe
+		public boolean existe(ArmaDeFogo arma) {
+			boolean existe = false;
+				if(armasDeFogo.contains(arma)) {
+				existe = true;
+			}
+			return existe;
 		}
 }
