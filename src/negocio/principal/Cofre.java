@@ -1,8 +1,10 @@
-package negocio;
+package negocio.principal;
 
 import java.time.LocalDate;
 
 import dados.IRepositorioArmaDeFogo;
+import negocio.ArmaDeFogo;
+import negocio.Militar;
 
 public class Cofre {
 	
