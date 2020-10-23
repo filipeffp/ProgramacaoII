@@ -119,5 +119,9 @@ public class ReentradaDeMaterialBélico {
 		JLabel lblReentradaMunQuantidade = new JLabel("Quantidade:");
 		lblReentradaMunQuantidade.setBounds(236, 140, 78, 14);
 		frame.getContentPane().add(lblReentradaMunQuantidade);
+		
+		JButton btnReentradaVoltar = new JButton("Voltar");
+		btnReentradaVoltar.setBounds(321, 319, 89, 23);
+		frame.getContentPane().add(btnReentradaVoltar);
 	}
 }

@@ -119,5 +119,9 @@ public class SaídaDefinitiva {
 		JLabel lblDefinitivoMunQuantidade = new JLabel("Quantidade:");
 		lblDefinitivoMunQuantidade.setBounds(236, 140, 78, 14);
 		frame.getContentPane().add(lblDefinitivoMunQuantidade);
+		
+		JButton btnDefinitivoVoltar = new JButton("Voltar");
+		btnDefinitivoVoltar.setBounds(321, 319, 89, 23);
+		frame.getContentPane().add(btnDefinitivoVoltar);
 	}
 }

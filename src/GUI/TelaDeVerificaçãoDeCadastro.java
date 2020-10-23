@@ -19,6 +19,7 @@ public class TelaDeVerificaçãoDeCadastro {
 	private JPasswordField passwordVerificacao;
 	private JLabel lblVerificacaoSenha;
 	private JLabel lblVerificacaoMensagem;
+	private JButton btnVerificacaoVoltar;
 
 	/**
 	 * Launch the application.
@@ -85,5 +86,9 @@ public class TelaDeVerificaçãoDeCadastro {
 		lblVerificacaoMensagem.setForeground(Color.RED);
 		lblVerificacaoMensagem.setBounds(42, 11, 370, 14);
 		frame.getContentPane().add(lblVerificacaoMensagem);
+		
+		btnVerificacaoVoltar = new JButton("Voltar");
+		btnVerificacaoVoltar.setBounds(167, 302, 89, 23);
+		frame.getContentPane().add(btnVerificacaoVoltar);
 	}
 }

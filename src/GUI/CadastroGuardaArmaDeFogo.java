@@ -94,5 +94,9 @@ public class CadastroGuardaArmaDeFogo {
 		textFieldCadastroArmaEspecie.setBounds(10, 270, 86, 20);
 		frame.getContentPane().add(textFieldCadastroArmaEspecie);
 		textFieldCadastroArmaEspecie.setColumns(10);
+		
+		JButton btnCadastroArmaVoltar = new JButton("Voltar");
+		btnCadastroArmaVoltar.setBounds(335, 319, 89, 23);
+		frame.getContentPane().add(btnCadastroArmaVoltar);
 	}
 }

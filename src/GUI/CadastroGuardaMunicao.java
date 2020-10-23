@@ -80,5 +80,9 @@ public class CadastroGuardaMunicao {
 		});
 		btnCadastroMunicaoCadastrar.setBounds(153, 197, 115, 23);
 		frame.getContentPane().add(btnCadastroMunicaoCadastrar);
+		
+		JButton btnCadastroMunicaoVoltar = new JButton("Voltar");
+		btnCadastroMunicaoVoltar.setBounds(323, 197, 89, 23);
+		frame.getContentPane().add(btnCadastroMunicaoVoltar);
 	}
 }

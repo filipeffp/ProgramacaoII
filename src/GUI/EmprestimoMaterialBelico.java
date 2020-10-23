@@ -119,5 +119,9 @@ public class EmprestimoMaterialBelico {
 		JLabel lblEmprestimoMunQuantidade = new JLabel("Quantidade:");
 		lblEmprestimoMunQuantidade.setBounds(236, 140, 78, 14);
 		frame.getContentPane().add(lblEmprestimoMunQuantidade);
+		
+		JButton btnEmprestimoVoltar = new JButton("Voltar");
+		btnEmprestimoVoltar.setBounds(321, 319, 89, 23);
+		frame.getContentPane().add(btnEmprestimoVoltar);
 	}
 }

@@ -76,5 +76,9 @@ public class MenuPrincipal {
 		JButton btnMenuHistoricoEmprestado = new JButton("Material b\u00E9lico emprestado");
 		btnMenuHistoricoEmprestado.setBounds(10, 326, 276, 23);
 		frame.getContentPane().add(btnMenuHistoricoEmprestado);
+		
+		JButton btnMenuVoltar = new JButton("Voltar");
+		btnMenuVoltar.setBounds(318, 362, 89, 23);
+		frame.getContentPane().add(btnMenuVoltar);
 	}
 }

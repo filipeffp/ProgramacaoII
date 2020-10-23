@@ -124,5 +124,9 @@ public class TelaDeCadastro {
 		JTextArea textArea = new JTextArea();
 		textArea.setBounds(20, 324, 4, 22);
 		frame.getContentPane().add(textArea);
+		
+		JButton btnCadastroVoltar = new JButton("Voltar");
+		btnCadastroVoltar.setBounds(335, 444, 89, 23);
+		frame.getContentPane().add(btnCadastroVoltar);
 	}
 }
