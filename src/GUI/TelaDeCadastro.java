@@ -1,18 +1,23 @@
 package GUI;
 
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
-import javax.swing.JLabel;
-import java.awt.Font;
-import java.awt.Color;
-import javax.swing.JButton;
 import javax.swing.JTextArea;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+
+import negocio.CadastrarUsuario;
+import negocio.beans.Usuario;
 
 public class TelaDeCadastro {
 
@@ -73,6 +78,7 @@ public class TelaDeCadastro {
 		passwordCadastro.setBounds(0, 262, 169, 20);
 		frame.getContentPane().add(passwordCadastro);
 		
+	    
 		JRadioButton rdbtnCadastroAdmSim = new JRadioButton("Sim");
 		rdbtnCadastroAdmSim.setBounds(0, 325, 58, 23);
 		frame.getContentPane().add(rdbtnCadastroAdmSim);
@@ -103,22 +109,48 @@ public class TelaDeCadastro {
 		frame.getContentPane().add(lblCadastroADM);
 		
 		JLabel lblCadastroRelatorio = new JLabel("");
+		lblCadastroRelatorio.setBounds(128, 384, 283, 37);
 		lblCadastroRelatorio.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblCadastroRelatorio.setForeground(Color.RED);
-		lblCadastroRelatorio.setBounds(128, 384, 283, 37);
 		frame.getContentPane().add(lblCadastroRelatorio);
 		
 		JLabel lblCadastroMensagem = new JLabel("CADASTRO");
-		lblCadastroMensagem.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblCadastroMensagem.setBounds(165, 11, 101, 31);
+		lblCadastroMensagem.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		frame.getContentPane().add(lblCadastroMensagem);
 		
 		JButton btnCadastroCadastrar = new JButton("Cadastrar");
+		btnCadastroCadastrar.setBounds(147, 444, 109, 23);
 		btnCadastroCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				int valor;
+				try {
+					valor = Integer.parseInt(textCadastroCPF.getText());
+					
+				}catch(NumberFormatException ex) {
+					JOptionPane.showMessageDialog(null, "Digite apenas números !");
+				}
+				
+				if(passwordCadastro == null||textCadastroCPF == null || textCadastroMatricula == null || textCadastroNome == null ||!rdbtnCadastroAdmSim.isSelected()&&!rdbtnCadastroAdmNao.isSelected()) {
+					JOptionPane.showMessageDialog(null, "Preencha todos os dados !");		
+				}
+				else {
+				int valor2 = Integer.parseInt(textCadastroCPF.getText());
+				Usuario usuario= new Usuario( passwordCadastro.getText() , textCadastroCPF.getText(), textCadastroMatricula.getText(), textCadastroNome.getText());
+				if(rdbtnCadastroAdmSim.isSelected()) {
+						usuario.setAdmin(true);
+				}
+				if ( CadastrarUsuario.getInstance().cadastrar(usuario) ) {
+					new TelaDeLoginPrincipal();
+					frame.setVisible(false);
+				} else {
+					JOptionPane.showMessageDialog(null, "CPF já cadastrado");
+				}
+				}
+			
+				
 			}
 		});
-		btnCadastroCadastrar.setBounds(147, 444, 109, 23);
 		frame.getContentPane().add(btnCadastroCadastrar);
 		
 		JTextArea textArea = new JTextArea();
@@ -127,6 +159,17 @@ public class TelaDeCadastro {
 		
 		JButton btnCadastroVoltar = new JButton("Voltar");
 		btnCadastroVoltar.setBounds(335, 444, 89, 23);
+		btnCadastroVoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new TelaDeVerificaçãoDeCadastro();
+				frame.setVisible(false);	
+			}
+		});
 		frame.getContentPane().add(btnCadastroVoltar);
+		
+		ButtonGroup group = new ButtonGroup();
+		group.add(rdbtnCadastroAdmSim);
+		group.add(rdbtnCadastroAdmNao);
+		frame.setVisible(true);
 	}
 }

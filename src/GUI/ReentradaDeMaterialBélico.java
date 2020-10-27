@@ -9,6 +9,8 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JRadioButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ReentradaDeMaterialBélico {
 
@@ -121,7 +123,14 @@ public class ReentradaDeMaterialBélico {
 		frame.getContentPane().add(lblReentradaMunQuantidade);
 		
 		JButton btnReentradaVoltar = new JButton("Voltar");
+		btnReentradaVoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new MaterialBélicoEmprestado();
+				frame.setVisible(false);
+			}
+		});
 		btnReentradaVoltar.setBounds(321, 319, 89, 23);
 		frame.getContentPane().add(btnReentradaVoltar);
+		frame.setVisible(true);
 	}
 }

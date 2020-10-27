@@ -1,17 +1,24 @@
 package negocio.beans;
 
 
-public class Usuario extends Militar{
+public class Usuario extends Militar {
   protected String senha;
   protected String log;
   protected boolean admin = false;
   
   
-  public Usuario(String senha, String cpf, String matricula,String nome) {
+  public Usuario(String senha, String cpf, String matricula, String nome) {
     super(cpf, matricula,nome);
     this.senha = senha;
     this.log = cpf;
   }
+  public Usuario(String senha, String cpf, String matricula, String nome,boolean admin) {
+	    super(cpf, matricula,nome);
+	    this.senha = senha;
+	    this.log = cpf;
+	    this.admin = admin;
+	  }
+  
 
   public boolean isAdmin() {
     return admin;

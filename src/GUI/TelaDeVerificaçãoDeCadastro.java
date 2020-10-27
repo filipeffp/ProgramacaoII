@@ -4,11 +4,17 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+
+import negocio.CadastrarUsuario;
+import negocio.beans.Usuario;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JPasswordField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.Color;
 
@@ -61,6 +67,19 @@ public class TelaDeVerificaçãoDeCadastro {
 		JButton btnVerificacaoLogin = new JButton("Login");
 		btnVerificacaoLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Usuario usuario= new Usuario( passwordVerificacao.getText() , txtVerificacaoCPF.getText(), null,null);
+
+				if ( CadastrarUsuario.getInstance().usuarioLogado(usuario) && CadastrarUsuario.getInstance().isADM(usuario)) {
+					new TelaDeCadastro();
+					frame.setVisible(false);
+				} 
+				else if(CadastrarUsuario.getInstance().usuarioLogado(usuario)&&!CadastrarUsuario.getInstance().isADM(usuario)){
+					JOptionPane.showMessageDialog(null, "Este usuário não é ADM");
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "Senha ou login invalido");
+				}
+				
 			}
 		});
 		btnVerificacaoLogin.setBounds(167, 244, 89, 23);
@@ -88,7 +107,15 @@ public class TelaDeVerificaçãoDeCadastro {
 		frame.getContentPane().add(lblVerificacaoMensagem);
 		
 		btnVerificacaoVoltar = new JButton("Voltar");
+		btnVerificacaoVoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new TelaDeLoginPrincipal();
+				frame.setVisible(false);	
+			}
+		});
 		btnVerificacaoVoltar.setBounds(167, 302, 89, 23);
 		frame.getContentPane().add(btnVerificacaoVoltar);
+		frame.setVisible(true);
 	}
 }
+

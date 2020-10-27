@@ -4,7 +4,7 @@ public class Militar extends Pessoa {
 	String matricula;
 	
 	//construtores
-	public Militar(String nome, String cpf, String matricula) {
+	public Militar(String cpf, String nome, String matricula) {
 		super(nome, cpf);
 		this.matricula = matricula;
 	}
