@@ -3,6 +3,8 @@ package dados;
 import java.util.ArrayList;
 
 import negocio.beans.ArmaDeFogo;
+import GUI.MaterialBélicoEmprestado;
+
 
 
 public class RepositorioArmaDeFogo implements IRepositorioArmaDeFogo{
@@ -137,6 +139,7 @@ public class RepositorioArmaDeFogo implements IRepositorioArmaDeFogo{
 											if(!armasDeFogo.get(cont).getStatus().equals(aux2)) {
 												armaFinal= gun;
 												armasDeFogo.get(cont).setStatus("dispensado");
+												armasDeFogo.remove(cont);
 												break;
 										}
 										}
@@ -150,6 +153,46 @@ public class RepositorioArmaDeFogo implements IRepositorioArmaDeFogo{
 					}
 			}
 			return armaFinal;
+		}
+		
+		public ArmaDeFogo statusReentrada(ArmaDeFogo arma) {
+			ArmaDeFogo armaFinal= null;
+			String aux = "ausente";
+			String aux2 = "dispensado";
+			if ( arma.getNrSerie() != null ) {
+				int cont = 0;
+				for (ArmaDeFogo gun : armasDeFogo) {
+					if ( arma.getNrSerie().equals( gun.getNrSerie())) {
+						if(arma.getCalibre().equals(gun.getCalibre())) {
+							if(arma.getMarca().equals(gun.getMarca())) {
+								if(arma.getModelo().equals(gun.getModelo())) {
+									if(arma.getEspecie().equals(gun.getEspecie())) {
+										if(armasDeFogo.get(cont).getStatus().equals(aux)) {
+											if(!armasDeFogo.get(cont).getStatus().equals(aux2)) {
+												armaFinal= gun;
+												armasDeFogo.get(cont).setStatus("armazenado");
+												break;
+										}
+										}
+						}
+					
+								}
+							}
+							}
+						}
+					cont++;
+					}
+			}
+			return armaFinal;
+		}
+		
+		public String varrer() {
+			String armas = "";
+			for(ArmaDeFogo gun : armasDeFogo) {
+				armas+= gun.toString()+"\n\n";
+			}
+			return armas;
+			
 		}
 
 }

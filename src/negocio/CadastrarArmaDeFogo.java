@@ -68,6 +68,24 @@ public class CadastrarArmaDeFogo {
 		}
 		return encontrado;
 	}
+	
+	public boolean encontradoReentrada(ArmaDeFogo arma) {
+		boolean encontrado= false;
+		ArmaDeFogo armaCadastrada= repositorioArmas.statusReentrada( arma );
+		if ( armaCadastrada != null && armaCadastrada.getMarca().equals(arma.getMarca())) {
+			if(armaCadastrada.getModelo().equals(arma.getModelo())) {
+				if(armaCadastrada.getCalibre().equals(arma.getCalibre())) {
+					if(armaCadastrada.getEspecie().equals(arma.getEspecie())){
+				encontrado= true;
+					}
+				}
+			}
+		}
+		return encontrado;
+	}
+	public String varrer() {
+		return repositorioArmas.varrer();		
+	}
 
 	
 }

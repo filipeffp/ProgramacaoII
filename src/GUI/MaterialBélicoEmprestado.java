@@ -7,11 +7,16 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JFormattedTextField;
+import javax.swing.DropMode;
+import javax.swing.JTextPane;
+
+import negocio.CadastrarArmaDeFogo;
 
 public class MaterialBélicoEmprestado {
 
 	private JFrame frame;
-	private JTextField textFieldEmprestadoHistorico;
+	public JTextPane textPaneEmprestadoHistorico;
 
 	/**
 	 * Launch the application.
@@ -45,12 +50,6 @@ public class MaterialBélicoEmprestado {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		textFieldEmprestadoHistorico = new JTextField();
-		textFieldEmprestadoHistorico.setEditable(false);
-		textFieldEmprestadoHistorico.setBounds(10, 11, 414, 394);
-		frame.getContentPane().add(textFieldEmprestadoHistorico);
-		textFieldEmprestadoHistorico.setColumns(10);
-		
 		JButton btnEmprestadoReentrar = new JButton("Reentrar");
 		btnEmprestadoReentrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -70,6 +69,11 @@ public class MaterialBélicoEmprestado {
 		});
 		btnEmprestadoVoltar.setBounds(335, 448, 89, 23);
 		frame.getContentPane().add(btnEmprestadoVoltar);
+		
+		textPaneEmprestadoHistorico = new JTextPane();
+		textPaneEmprestadoHistorico.setBounds(10, 11, 414, 409);
+		frame.getContentPane().add(textPaneEmprestadoHistorico);
+		textPaneEmprestadoHistorico.setText(CadastrarArmaDeFogo.getInstance().varrer());
 		frame.setVisible(true);
 	}
 }
