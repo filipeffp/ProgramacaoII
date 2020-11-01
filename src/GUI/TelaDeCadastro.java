@@ -126,6 +126,7 @@ public class TelaDeCadastro {
 				int valor;
 				try {
 					valor = Integer.parseInt(textCadastroCPF.getText());
+					valor = Integer.parseInt(textCadastroMatricula.getText());
 					
 				}catch(NumberFormatException ex) {
 					JOptionPane.showMessageDialog(null, "Digite apenas números !");
@@ -136,6 +137,7 @@ public class TelaDeCadastro {
 				}
 				else {
 				int valor2 = Integer.parseInt(textCadastroCPF.getText());
+				valor2 = Integer.parseInt(textCadastroMatricula.getText());
 				Usuario usuario= new Usuario( passwordCadastro.getText() , textCadastroCPF.getText(), textCadastroMatricula.getText(), textCadastroNome.getText());
 				if(rdbtnCadastroAdmSim.isSelected()) {
 						usuario.setAdmin(true);
