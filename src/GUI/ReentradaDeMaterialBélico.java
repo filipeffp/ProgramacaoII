@@ -43,9 +43,6 @@ public class ReentradaDeMaterialBélico {
 	private JTextField textFieldReentradaNdeSerie;
 	private JTextField textFieldReentradaCalibre;
 	private JTextField textFieldReentradaEspecie;
-	private JTextField textFieldReentradaMunCalibre;
-	private JTextField textFieldReentradaMunQuantidade;
-	private	JRadioButton rdbtnReentradaMunicao;
 	private final Action action = new SwingAction();
 	private JTextField textFieldReentradaMarca;
 
@@ -114,75 +111,11 @@ public class ReentradaDeMaterialBélico {
 		lblReentradaCalibre.setBounds(10, 181, 46, 14);
 		frame.getContentPane().add(lblReentradaCalibre);
 		
-		rdbtnReentradaMunicao = new JRadioButton("Muni\u00E7\u00E3o");
-		rdbtnReentradaMunicao.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if(textFieldReentradaModelo.isEnabled()) {
-					textFieldReentradaModelo.disable();
-					textFieldReentradaModelo.setText(null);
-					textFieldReentradaCalibre.disable();
-					textFieldReentradaCalibre.setText(null);
-					textFieldReentradaEspecie.disable();
-					textFieldReentradaEspecie.setText(null);
-					textFieldReentradaNdeSerie.disable();
-					textFieldReentradaNdeSerie.setText(null);
-					textFieldReentradaMarca.disable();
-					textFieldReentradaMarca.setText(null);
-					textFieldReentradaMunCalibre.enable();
-					textFieldReentradaMunQuantidade.enable();
-					}
-					else{
-					textFieldReentradaModelo.enable();
-					textFieldReentradaCalibre.enable();
-					textFieldReentradaEspecie.enable();
-					textFieldReentradaNdeSerie.enable();
-					textFieldReentradaMarca.enable();
-					textFieldReentradaMunCalibre.disable();
-					textFieldReentradaMunQuantidade.disable();
-					textFieldReentradaMunCalibre.setText(null);
-					textFieldReentradaMunQuantidade.setText(null);
-					}
-				
-			}
-		});
-		
 		JButton btnReentradaRetirar = new JButton("Reentrar");
 		btnReentradaRetirar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(rdbtnReentradaMunicao.isSelected()) {
-					if(textFieldReentradaMunCalibre.getText().isEmpty()||textFieldReentradaMunQuantidade.getText().isEmpty()) {
-						JOptionPane.showMessageDialog(null, "Preencha todos os dados devidos !");
-						}
-					
-				else {
-					int valor;
-					try {
-						valor = Integer.parseInt(textFieldReentradaMunCalibre.getText());
-						valor = Integer.parseInt(textFieldReentradaMunQuantidade.getText());
-					}catch(NumberFormatException ex) {
-						JOptionPane.showMessageDialog(null, "Digite apenas números !");
-					}
-					
+		
 				
-						LocalDate date = LocalDate.now();
-				
-						Municao municao = new MunicaoPatrimonio(textFieldReentradaMunCalibre.getText(), "Munição", date, null, Integer.parseInt(textFieldReentradaMunQuantidade.getText()), null);
-						if(CadastrarMunicao.getInstance().checar(municao)) {
-							CadastrarMunicao.getInstance().retirar(municao);
-							JOptionPane.showMessageDialog(null, "Reentrada feita");
-							new MenuPrincipal();
-							frame.setVisible(false);
-						}
-						else {
-							JOptionPane.showMessageDialog(null, "Material não encontrado !");
-						}
-					
-					
-					
-				}
-				}
-				else {
 					if(textFieldReentradaCalibre.getText().isEmpty()||textFieldReentradaEspecie.getText().isEmpty()||textFieldReentradaModelo.getText().isEmpty()||textFieldReentradaNdeSerie.getText().isEmpty()||textFieldReentradaMarca.getText().isEmpty()) {
 						JOptionPane.showMessageDialog(null, "Preencha todos dados devidos !");
 						}
@@ -212,7 +145,7 @@ public class ReentradaDeMaterialBélico {
 					}
 					
 					
-				}
+				
 			}
 		});
 		btnReentradaRetirar.setBounds(151, 319, 115, 23);
@@ -226,38 +159,6 @@ public class ReentradaDeMaterialBélico {
 		textFieldReentradaEspecie.setBounds(10, 270, 86, 20);
 		frame.getContentPane().add(textFieldReentradaEspecie);
 		textFieldReentradaEspecie.setColumns(10);
-		
-
-	
-
-	
-	
-	
-	
-
-		rdbtnReentradaMunicao.setBounds(301, 41, 109, 23);
-		frame.getContentPane().add(rdbtnReentradaMunicao);
-		
-		textFieldReentradaMunCalibre = new JTextField();
-		textFieldReentradaMunCalibre.setEnabled(false);
-	
-		textFieldReentradaMunCalibre.setBounds(324, 84, 86, 20);
-		frame.getContentPane().add(textFieldReentradaMunCalibre);
-		textFieldReentradaMunCalibre.setColumns(10);
-		
-		textFieldReentradaMunQuantidade = new JTextField();
-		textFieldReentradaMunQuantidade.setEnabled(false);
-		textFieldReentradaMunQuantidade.setBounds(324, 137, 86, 20);
-		frame.getContentPane().add(textFieldReentradaMunQuantidade);
-		textFieldReentradaMunQuantidade.setColumns(10);
-		
-		JLabel lblReentradaMunCalibre = new JLabel("Calibre:");
-		lblReentradaMunCalibre.setBounds(268, 87, 46, 14);
-		frame.getContentPane().add(lblReentradaMunCalibre);
-		
-		JLabel lblReentradaMunQuantidade = new JLabel("Quantidade:");
-		lblReentradaMunQuantidade.setBounds(236, 140, 78, 14);
-		frame.getContentPane().add(lblReentradaMunQuantidade);
 		
 		JButton btnReentradaVoltar = new JButton("Voltar");
 		btnReentradaVoltar.addActionListener(new ActionListener() {
